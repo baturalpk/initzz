@@ -1,0 +1,28 @@
+[user]
+    name = Baturalp KIZILTAN
+    email = baturalp.kiziltan@outlook.com
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    hyperlinks = true
+    hyperlinks-file-link-format = "file-line://{path}:{line}"
+    line-numbers = true
+    navigate = true
+    side-by-side = true
+
+[diff]
+    colorMoved = default
+
+[merge]
+    conflictstyle = diff3
+
+[alias]
+    co = checkout
+    br = branch
+    cm = commit
+    st = status

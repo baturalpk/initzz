@@ -9,7 +9,7 @@ if ($wg -eq $False)
 }
 
 # Invocation order policy: FIFO
-$scripts = @("explorer", "choco", "wsl", "winget", "win-terminal", "env")
+$scripts = @("explorer", "choco", "wsl", "winget", "win-terminal", "env", "dotfiles")
 
 $workingDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $scriptsDir = Join-Path -Path $workingDir -ChildPath .\scripts
