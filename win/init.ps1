@@ -1,7 +1,15 @@
 ﻿#Requires -RunAsAdministrator
 
+$wg = [bool](Get-Command -Name winget -ErrorAction SilentlyContinue)
+if ($wg -eq $False)
+{
+    Write-Host -ForegroundColor Red "Unable to find 'winget' executable."
+    Write-Host -ForegroundColor Blue "Get 'winget' from https://www.microsoft.com/store/productId/9NBLGGH4NNS1"
+    exit 1
+}
+
 # Invocation order policy: FIFO
-$scripts = @("env", "wsl", "choco", "winget", "win-terminal", "explorer")
+$scripts = @("explorer", "choco", "wsl", "winget", "win-terminal", "env")
 
 $workingDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $scriptsDir = Join-Path -Path $workingDir -ChildPath .\scripts

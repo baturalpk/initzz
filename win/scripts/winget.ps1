@@ -1,4 +1,6 @@
 ﻿$packages = @(
+    "Microsoft.VCRedist.2015+.x64"
+
     "Microsoft.PowerShell" # PowerShell 7+ 
     "Starship.Starship"
     "Microsoft.WindowsTerminal"
@@ -13,7 +15,6 @@
     "BlenderFoundation.Blender"
     "Docker.DockerDesktop"
     "KDE.Krita"
-    "KDE.KritaShellExtension"
     "Inkscape.Inkscape"
     "JetBrains.Toolbox"
     "Unity.UnityHub"
@@ -26,6 +27,7 @@
     "sharkdp.bat"
     "dandavison.delta"
     "stedolan.jq"
+    "BurntSushi.ripgrep.MSVC"
     "EclipseAdoptium.Temurin.17.JDK"
 
     "Discord.Discord"
@@ -47,32 +49,34 @@
 )
 
 $notes = @(
-    "Change WindowsTerminal default profile to PowerShell 7+"
     "Restore KeePass configurations"
-    "Restore WindowsAutoNightMode preferences"
+    "Restore AutoDarkMode preferences"
     "Modify Greenshot output directory options"
-    "Install select VS2022 components"
     "Update OBS preferences"
     "Update Zoom settings"
 )
 
 function install_packages {
+    md .\logs -Force | Out-Null
+    $logfile = ".\logs\winget.log"
+    Out-File -FilePath $logfile -InputObject "[Failing Installations]"
+
     foreach ($pkg in $packages) {
         Clear-Host
         winget install -e --accept-source-agreements --accept-package-agreements --id $pkg
 
-        if ($LASTEXITCODE -eq 0) {
-            Write-Host -ForegroundColor Green "Installation successful: $pkg"
+        if ($LASTEXITCODE -ne 0) {
+            Add-Content $logfile "`t$pkg"
         }
-        else {
-            Write-Host -ForegroundColor Red "Already installed/up-to-date or an unknown error has occured: $pkg"
-        }
-        Pause
     }
 }
 
 install_packages
 
+# Upgrade all remaining packages to the latest available version
+winget upgrade --all
+
+# Print post-installation instructions
 Write-Host -ForegroundColor Red -BackgroundColor White " 📌 POST INSTALLATION NOTES: "
 foreach ($note in $notes) {
     Write-Host -ForegroundColor Yellow "> $note"
