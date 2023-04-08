@@ -1,7 +1,7 @@
 ﻿#Requires -RunAsAdministrator
 
 # Invocation order policy: FIFO
-$scripts = @("env", "wsl", "choco", "winget", "win-terminal")
+$scripts = @("env", "wsl", "choco", "winget", "win-terminal", "explorer")
 
 $workingDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $scriptsDir = Join-Path -Path $workingDir -ChildPath .\scripts
