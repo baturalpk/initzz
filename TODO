@@ -1,0 +1,8 @@
+common
+	Add dotfiles: .zshrc, .gitconfig, .vimrc...
+
+mac
+	Add touch_id sudo enabler.
+	Add Homebrew scripts.
+	Add nix scripts.
+	Add generic init scripts
