@@ -73,9 +73,6 @@ function install_packages {
 
 install_packages
 
-Write-Host "Updating font face for WindowsTerminal: Cascadia Code"
-%LOCALAPPDATA%\Packages\Microsoft. WindowsTerminal_8wekyb3d8bbwe\LocalState\
-
 Write-Host -ForegroundColor Red -BackgroundColor White " 📌 POST INSTALLATION NOTES: "
 foreach ($note in $notes) {
     Write-Host -ForegroundColor Yellow "> $note"
