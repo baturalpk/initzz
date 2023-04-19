@@ -2,4 +2,8 @@ mac
 	Add touch_id sudo enabler.
 	Add Homebrew scripts.
 	Add nix scripts.
-	Add generic init scripts
+	Add generic init scripts.
+
+common
+	Install Perforce Merge tool by default.
+	Make git merge tool path platform aware.
