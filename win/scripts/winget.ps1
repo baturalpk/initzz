@@ -9,6 +9,7 @@
     
     "KeePassXCTeam.KeePassXC"
     "Mozilla.Firefox"
+    "Google.Chrome"
     "Cloudflare.Warp"
     "ProtonTechnologies.ProtonVPN"
 
@@ -16,19 +17,25 @@
     "Docker.DockerDesktop"
     "KDE.Krita"
     "Inkscape.Inkscape"
-    "JetBrains.Toolbox"
-    "Unity.UnityHub"
+    "GIMP.GIMP"
     "Postman.Postman"
     "Microsoft.VisualStudioCode"
     "Microsoft.VisualStudio.2022.Community"
+    "Microsoft.VisualStudio.2022.BuildTools"
     
     "Git.Git"
     "OliverBetz.ExifTool"
+    "yt-dlp.yt-dlp"
     "sharkdp.bat"
     "dandavison.delta"
     "stedolan.jq"
     "BurntSushi.ripgrep.MSVC"
-    "EclipseAdoptium.Temurin.17.JDK"
+    "dbrgn.tealdeer"
+
+    "GoLang.Go.1.20"
+    "Python.Python.3.10"
+    "OpenJS.NodeJS.LTS; corepack enable"
+    "Rustlang.Rustup"
 
     "Discord.Discord"
     "ElectronicArts.EADesktop"

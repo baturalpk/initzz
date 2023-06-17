@@ -1,9 +1,9 @@
 mac
 	Add touch_id sudo enabler.
-	Add Homebrew scripts.
-	Add nix scripts.
+	Install iTerm2 and a bunch of other programs
+	Install fish shell and set as default
+	Add Homebrew scripts. (See win/scripts/wsl.ps1)
 	Add generic init scripts.
 
-common
-	Install Perforce Merge tool by default.
-	Make git merge tool path platform aware.
+win
+	Wrap all WSL commands into a bash script

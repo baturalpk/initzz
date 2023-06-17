@@ -19,22 +19,14 @@
     side-by-side = true
 
 [diff]
-    tool = p4merge
     colorMoved = default
 [difftool]
     prompt = false
-[difftool "p4merge"]
-    cmd = 'C:/Program Files/Perforce/p4merge.exe' \"$REMOTE\" \"$LOCAL\"
-    prompt = false
 
 [merge]
-    tool = p4merge
     conflictstyle = diff3
 [mergetool]
     keepBackup = false
-[mergetool "p4merge"]
-    cmd = 'C:/Program Files/Perforce/p4merge.exe' \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
-    trustExitCode = true
 
 [alias]
     co = checkout
