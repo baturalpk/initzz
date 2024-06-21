@@ -1,3 +1,9 @@
+import = [
+    "C:\\Users\\baturalp\\AppData\\Roaming\\alacritty\\themes\\gruvbox_dark.toml",
+    # "C:\\Users\\baturalp\\AppData\\Roaming\\alacritty\\themes\\everforest_light.toml",
+    # "C:\\Users\\baturalp\\AppData\\Roaming\\alacritty\\themes\\gruvbox_light.toml",
+]
+
 shell = "pwsh"
 
 working_directory = "C:\\Users\\baturalp"
@@ -9,3 +15,13 @@ padding = { x = 7, y = 7 }
 
 [font]
 normal = { family = "CaskaydiaCove NFM" }
+
+[mouse]
+bindings = [
+    { mouse = "Right", action = "Copy" }, # Copy on RMB click
+]
+
+[keyboard]
+bindings = [
+    { key = "Back", mods = "Control", chars = "\u0017" }, # Delete word with Ctrl+Backspace, identical to Ctrl+W, ref: https://github.com/alacritty/alacritty/issues/2930#issuecomment-1059833970
+]
