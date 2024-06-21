@@ -1,0 +1,11 @@
+shell = "pwsh"
+
+working_directory = "C:\\Users\\baturalp"
+
+[window]
+dimensions.lines = 35
+dimensions.columns = 140
+padding = { x = 7, y = 7 }
+
+[font]
+normal = { family = "CaskaydiaCove NFM" }
