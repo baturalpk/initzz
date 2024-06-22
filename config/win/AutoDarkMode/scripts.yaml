@@ -1,0 +1,9 @@
+Enabled: true
+Component:
+  Scripts:
+    - Name: Switch & Reload Alacritty Theme
+      Command: pwsh
+      WorkingDirectory: C:\Users\baturalp\AppData\Roaming\alacritty\themes\
+      ArgsLight: [-Command, cp gruvbox_light.toml _active_theme.toml && echo]
+      ArgsDark: [-Command, cp gruvbox_dark.toml _active_theme.toml && echo]
+      AllowedSources: [Any]

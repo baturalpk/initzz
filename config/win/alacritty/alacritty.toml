@@ -1,7 +1,5 @@
 import = [
-    "C:\\Users\\baturalp\\AppData\\Roaming\\alacritty\\themes\\gruvbox_dark.toml",
-    # "C:\\Users\\baturalp\\AppData\\Roaming\\alacritty\\themes\\everforest_light.toml",
-    # "C:\\Users\\baturalp\\AppData\\Roaming\\alacritty\\themes\\gruvbox_light.toml",
+    "C:\\Users\\baturalp\\AppData\\Roaming\\alacritty\\themes\\_active_theme.toml",
 ]
 
 shell = "pwsh"
